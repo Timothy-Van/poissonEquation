@@ -1,0 +1,13 @@
+#+TITLE: Direct Simulation of Turbulent Channel Flow
+#+SUBTITLE: The legacy of KMM 1987
+
+* Introduction
+The 
+
+
+* Fourier trial function
+
+* Chebyshev trial function
+
+
+

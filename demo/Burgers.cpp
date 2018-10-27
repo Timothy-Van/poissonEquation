@@ -1,38 +1,77 @@
+#include <iostream>
+
+using namespace std;
+
+
 /*****************************************************************************/
 /*           1D Burger's equation solved by pseudo spectral method           */
 /*****************************************************************************/
 
 
 
+void initialize();
+void constructConv();
+
 
 int main(int argc, char *argv[])
 {
+  // Time control
+  int ntmax;
+  double tFinal;
+  double dt;
+
+  // Space control
+  int N; // number of collocation points
   
- 
-  /* Define grid */
-  
+  // Initial the solution
+  initialize();
 
-  /* Define wavenumber */
+  // Start the time loop
+  for (int i = 0; i < ntmax; ++i) {
 
-  /* Initialize solution */
+    // Construct \hat(w)_k^{n}
+    conv();
 
-  /* Transform the solution to Fourier space */
-
-  
-  /* Start time loop */
-  for (int it = 0; it < MAXIMUM; ++it) {
+    // Advance to \hat{u}_k^{n+1}
     
-    /* Compute the u_x in spectral space */
+    // Check the save
+    if () {
+      // save the solution in physical space
+    }
 
-    /* Transform u_x from spectral to physical space */
 
-    /* Construct u * u_x in physical space */
-
-    /* Advance the time step */
-
-    /* Check whether we should store the solution in file */
+    // Check time
+    if (condition) {
+      // exit
+    }
   }
+
   
+
   
   return 0;
+}
+
+void initialize()
+{
+  ///////////////////////////////////////////////////////////////////////////////
+  // subroutine to initialize the solution both in physical and spectral space //
+  // compute u^0(x_i) and \hat{u}^0_k
+  ///////////////////////////////////////////////////////////////////////////////
+  
+
+
+
+
+
+  
+}
+
+void constructConv()
+{
+  /////////////////////////////////////////////////////////////////////////////
+  //              subroutine to construct the convective terms               //
+  //              the 3/2 rule is used to dealiasing
+  /////////////////////////////////////////////////////////////////////////////
+
 }
